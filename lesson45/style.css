@@ -1,0 +1,9 @@
+div {
+    /* border-radius: 50%;
+    border:  1px solid black; */
+    height: 400px;
+    width: 300px;
+    background-image: url(./img/lightoff.png);
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
