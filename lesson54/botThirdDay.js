@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 } else if ( text != "/show" ) {
                     messagesArray.push(text)
-                } else if (text === "/show" && localStorage.getItem(updateId) === "1") {
+                } else if (text === "/show" && localStorage.getItem((updateId) === "1")) {
                     sendArray(messagesArray)
                     localStorage.setItem(updateId, 2)
                 }

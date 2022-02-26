@@ -75,7 +75,7 @@ function checkStop() {
         }, 310)
     }
 
-    if (!gameStop && handX > x1) {
+    if (!gameStop && handX > x2) {
         points++
     }
     console.log(points)
