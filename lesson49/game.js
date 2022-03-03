@@ -12,7 +12,6 @@ function go (event) {
     let x = parseInt(dino.style.left)
     let y = parseInt(window.getComputedStyle(dino).top)
     let maxX = window.innerWidth
-    
 
     if (!x) {
         x = 50
@@ -21,12 +20,12 @@ function go (event) {
     if (event.code === "ArrowRight") {
         if (x < maxX - 75) {
             dino.style.transform = "scaleX(1)";
-            x += 20
+            x += 25
         }
     } else if (event.code === "ArrowLeft") {
         if (x > 0) {
             dino.style.transform = "scaleX(-1)";
-            x -= 20
+            x -= 25
         }  
     } else if (event.code === "Space") {
         dino.style.top = `${y - 100}px`
@@ -35,7 +34,7 @@ function go (event) {
     }
 
     dino.style.left = `${x}px`
-     // console.log(x, y)
+     console.log(x, y)
      setTimeout(() => checkStop(), 310)
 }
 
@@ -53,7 +52,9 @@ function checkStop() {
     }
     
 
-    let tree = document.querySelector(".tree")
+    let tree = document.querySelector(".trees")
+    
+    
     let tw = parseInt(window.getComputedStyle(tree).width)
     let th = parseInt(window.getComputedStyle(tree).height)
     
@@ -75,8 +76,16 @@ function checkStop() {
         }, 310)
     }
 
-    if (!gameStop && handX > x2) {
-        points++
+    if (handX > x2) {
+        tree.getAttribute("id", "tree")
+        tree.setAttribute("id", "tree2")
     }
+
+    let checkPoints = document.querySelector(".points")
+
+    if (!gameStop && handX > x1 && handX < x2 ) {
+        points++ 
+    }
+    checkPoints.innerHTML = `points: ${points}` 
     console.log(points)
 }
