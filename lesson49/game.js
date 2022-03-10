@@ -20,7 +20,10 @@ function go (event) {
     if (event.code === "ArrowRight") {
         if (x < maxX - 75) {
             dino.style.transform = "scaleX(1)";
-            x += 25
+            x += 25   
+        } else if (x = maxX) {
+            x = 0
+            y = 0    
         }
     } else if (event.code === "ArrowLeft") {
         if (x > 0) {
@@ -79,12 +82,13 @@ function checkStop() {
     if (handX > x2) {
         tree.getAttribute("id", "tree")
         tree.setAttribute("id", "tree2")
+
     }
 
     let checkPoints = document.querySelector(".points")
 
-    if (!gameStop && handX > x1 && handX < x2 ) {
-        points++ 
+    if (!gameStop && handX > x1 && handX < x2) {
+        points ++ 
     }
     checkPoints.innerHTML = `points: ${points}` 
     console.log(points)

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.trace {
+    background-color: darkgreen;
+    width: 90vw;
+    height: 200px;
+}
+
+.rabbit, .turtle {
+    position: absolute;
+    left: 10px;
+    transition: 0.3s;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    
+}
