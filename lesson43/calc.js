@@ -31,10 +31,14 @@ function calc() {
     }
     const firstNum = Number(text.slice(0, symbolIndex));
     const secondNum = Number(text.slice(symbolIndex+1, text.length));
-    if(text[i] === "+") const result = firstNum + secondNum
-    else if(text[i] === "-") const result = firstNum - secondNum
-    else if(text[i] === "*") const result = firstNum * secondNum
-    else if(text[i] === "/") const result = firstNum / secondNum
-    
+    if(text[i] === "+") {
+        const result = firstNum + secondNum
+    } else if(text[i] === "-") {
+        const result = firstNum - secondNum
+    } else if(text[i] === "*") {
+        const result = firstNum * secondNum
+    } else if(text[i] === "/") {
+        const result = firstNum / secondNum
+    }
     document.querySelector("div").innerText = result
 }
